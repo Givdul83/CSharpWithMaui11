@@ -76,10 +76,13 @@ public class MenuService
     private void ShowList()
     {
         Console.Clear();
-        
-        
-           foreach(IContact contact in _contactService.GetContactsFromList())
+
+            Console.WriteLine("#### All Contacts ####");
+            Console.WriteLine("--------------------------------------------------");
+            int index = 1;
+        foreach (IContact contact in _contactService.GetContactsFromList())
         {
+            Console.WriteLine($"{index}.");
             Console.WriteLine($"Name:  {contact.FirstName} {contact.LastName}");
             Console.WriteLine($"Email: {contact.Email}");
             Console.WriteLine($"Phone: {contact.PhoneNumber}");
@@ -87,44 +90,12 @@ public class MenuService
             Console.WriteLine($"Postal Code: {contact.PostalCode}   {contact.City}");
             Console.WriteLine("----------------------------------------------------");
             Console.WriteLine("\n");
+
+            index++;
         }
+        
 
-
-        //Console.Clear();
-        //Console.WriteLine("\n\n\n");
-        //Console.WriteLine("###  All Contacts  ###");
-        //Console.WriteLine();
-        //int index = 1;
-        //var list = _contactService.GetContactsFromList().ToList()?? new List<IContact>();
-
-        //if (list != null)
-        //{
-        //    foreach (IContact contact in list)
-        //    {
-        //        Console.WriteLine($"{index}.");
-        //        Console.WriteLine($"Name:  {contact.FirstName} {contact.LastName}");
-        //        Console.WriteLine();
-        //        Console.WriteLine($"Email: {contact.Email}");
-        //        Console.WriteLine();
-        //        Console.WriteLine($"Phone: {contact.PhoneNumber}");
-        //        Console.WriteLine();
-        //        Console.WriteLine($"Adress: {contact.StreetAddress} ");
-        //        Console.WriteLine();
-        //        Console.WriteLine($"Postal Code: {contact.PostalCode}   {contact.City}");
-        //        Console.WriteLine();
-        //        Console.WriteLine("----------------------------------------------------");
-        //        Console.WriteLine();
-
-        //        index++;
-        //    }
-        //list.Clear();
-        //list = null;
-        //index = 0;
-        //}
-        //    else
-        //    {
-        //        Console.WriteLine("error");
-        //    }
+            
 
         Console.WriteLine("Press any key to return to main menu");
         Console.ReadKey();
