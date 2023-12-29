@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:models="clr-namespace:AppLibrary.Models;assembly=AppLibrary"
+             xmlns:pages="clr-namespace:AddressbookMobileApp.ViewModels"
+             xmlns:viewmodels="clr-namespace:AddressbookMobileApp.ViewModels"
+             x:DataType="{x:Type viewmodels:AddViewModel}"
+             x:Class="AddressbookMobileApp.Views.AddPage"
+             Title="AddPage">
+
+    <ScrollView>
+    <VerticalStackLayout>
+            <Grid RowDefinitions="auto,auto, auto,auto,auto,auto, auto,auto,auto,auto,auto, auto, auto,auto, auto, auto ,auto" BackgroundColor="Beige">
+                <Label Grid.Row="0"
+                        Text="Add Contact"
+                        FontSize="25"
+                        FontAttributes="Italic"
+                        VerticalOptions="Center" 
+                        HorizontalOptions="Center"
+                        Margin="0,10,0,20"/>
+
+                <Label Grid.Row="1"
+                       Text="Enter first name"
+                       FontSize="15"
+                       FontAttributes="Bold"
+                       HorizontalOptions="Center"
+                       Margin="0,10,0,0"/>
+                <Entry Grid.Row="2"
+                       x:Name="Contact_FirstName"
+                       BackgroundColor="White"
+                       Margin="0,20,0,20"
+                       MaximumWidthRequest="600"/>
+
+                <Label Grid.Row="3"
+                       Text="Enter last name"
+                       FontSize="15"
+                       FontAttributes="Bold"
+                       HorizontalOptions="Center"
+                       Margin="0,20,0,0"/>
+                <Entry Grid.Row="4"
+                       x:Name="Contact_LastName"
+                       BackgroundColor="White"
+                       Margin="0,10,0,20"
+                       MaximumWidthRequest="600"/>
+
+                <Label Grid.Row="5"
+                       Text="Enter email"
+                       FontSize="15"
+                       FontAttributes="Bold"
+                       HorizontalOptions="Center"
+                       Margin="0,20,0,0"/>
+                <Entry Grid.Row="6"
+                       x:Name="Contact_Email"
+                       BackgroundColor="White"
+                       Margin="0,10,0,20"
+                       MaximumWidthRequest="600"/>
+
+                <Label Grid.Row="7"
+                       Text="Enter phone number:"
+                       FontSize="15"
+                       FontAttributes="Bold"
+                       HorizontalOptions="Center"
+                       Margin="0,20,0,0"/>
+                <Entry Grid.Row="8"
+                       x:Name="Contact_PhoneNumber"
+                       BackgroundColor="White"
+                       Margin="0,10,0,20"
+                       MaximumWidthRequest="600"/>
+
+                <Label Grid.Row="9"
+                       Text="Enter address"
+                       FontSize="15"
+                       FontAttributes="Bold"
+                       HorizontalOptions="Center"
+                       Margin="0,20,0,0"/>
+                <Entry Grid.Row="10"
+                       x:Name="Contact_StreetAdress"
+                       BackgroundColor="White"
+                       Margin="0,10,0,20"
+                       MaximumWidthRequest="600"/>
+
+                <Label Grid.Row="11"
+                       Text="Enter postal code"
+                       FontSize="15"
+                       FontAttributes="Bold"
+                       HorizontalOptions="Center"
+                       Margin="0,20,0,0"/>
+                <Entry Grid.Row="12"
+                       x:Name="Contact_PostalCode"
+                       BackgroundColor="White"
+                       Margin="0,10,0,20"
+                       MaximumWidthRequest="600"/>
+
+                <Label Grid.Row="13"
+                       Text="Enter city"
+                       FontSize="15"
+                       FontAttributes="Bold"
+                       HorizontalOptions="Center"
+                       Margin="0,20,0,0"/>
+                <Entry Grid.Row="14"
+                       x:Name="Contact_City"
+                       BackgroundColor="White"
+                       Margin="0,10,0,20"
+                       MaximumWidthRequest="600"/>
+
+                <Button Grid.Row="15"
+                        Clicked="Button_AddContact_Clicked"
+                        Text="Press to add contact "
+                       x:Name="Button_AddContact"
+                       HorizontalOptions="FillAndExpand"
+                       MaximumWidthRequest="600"
+                       Margin="0,20,0,20"/>
+                
+                <Label Grid.Row="16"
+                       x:Name="Add_Result"
+                       FontSize="15"
+                       FontAttributes="Bold"
+                       HorizontalOptions="Center"
+                       Margin="0,20,0,30"/>  
+
+            </Grid>   
+    </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

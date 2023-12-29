@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:models="clr-namespace:AppLibrary.Models;assembly=AppLibrary"
+             xmlns:pages="clr-namespace:AddressbookMobileApp.ViewModels"
+             xmlns:viewmodels="clr-namespace:AddressbookMobileApp.ViewModels"
+             x:DataType="{x:Type viewmodels:RemoveViewModel}" 
+             x:Class="AddressbookMobileApp.Views.RemovePage"
+             
+             Title="RemovePage">
+    <ScrollView>
+        <VerticalStackLayout>
+            <Grid RowDefinitions="auto, auto, auto, auto, auto, auto, auto" Margin="20" BackgroundColor="Beige">
+
+
+                <Label Grid.Row="0"
+                     Text="Remove Contact"
+                     VerticalOptions="Center" 
+                     HorizontalOptions="Center"
+                     FontSize="20"
+                     FontAttributes="Italic"
+                     Margin="0,20,0,20"/>
+
+
+                <Label Grid.Row="1"
+                     Text="Enter Email of Contact you want to find and Remove:"
+                     HorizontalOptions="Center"
+                     Margin="0,20,0,20"/>
+
+                <Entry Grid.Row="2"
+                    x:Name="Entry_Email"
+                    HorizontalOptions="CenterAndExpand"
+                    MinimumWidthRequest="300"
+                    Margin="0,20,0,20"
+                    BackgroundColor="White"
+            />
+
+
+                <Button Grid.Row="3"
+                     x:Name="Button_SearchToRemove" 
+                     Text="Press to Search"
+                     Clicked="Button_SearchToRemove_Clicked"
+                     HorizontalOptions="FillAndExpand"
+                     MaximumWidthRequest="600"
+                     Margin="0,20,0,20"/>
+
+
+                <Label Grid.Row="4"
+                    x:Name="Found_Contact"
+                    HorizontalOptions="Center"
+                    VerticalOptions="CenterAndExpand"
+                    FontSize="20"
+                     Margin="0,20,0,20"
+                    />
+                
+                <Button Grid.Row="5"
+                     BackgroundColor="DarkRed"
+                     x:Name="Button_Delete"
+                     Text="Press to delete found contact"
+                     Clicked="Button_Delete_Clicked"
+                     HorizontalOptions="FillAndExpand"
+                     MaximumWidthRequest="600"
+                     Margin="0,20,0,20"/>
+
+                <Label Grid.Row="6"
+                     x:Name="Deleted_Contact"
+                     HorizontalOptions="Center"
+                     VerticalOptions="CenterAndExpand"
+                     FontSize="20"
+                      Margin="0,20,0,20"
+                     /> 
+            </Grid>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
